@@ -1,0 +1,53 @@
+
+
+ServerSocket
+    #accept返回一个Socket对象, 通过这个Socket对象实现与客户端Socket通信(InputStream/OutpusStream)
+
+DatagramSocket 数据报Socket
+DatagrapPacket 数据报包 通过指定多播地址可以实现多播
+               客户端Socket通过加入指定的多播组可以实现接收
+InetAddress
+    |
+    | - Inet4Address
+    | - Inet6Address
+
+
+
+NIO Channel/Buffer
+Buffer: direct/non-direct
+    
+SocketChannel
+    #open(SocketAddress)
+    #write()
+    #read()  
+ServerSocketChannel
+    #socket()
+
+AsynchronousSocketChannel
+    #open
+    #read
+    #write
+AsynchronousServerSocketChannel
+    #open
+    #read
+    #write
+
+Socket的各个选项配置
+
+
+DatagramChannel
+    #connect(SocketAddress)
+
+ThreadPoolExecutor executor = 
+    (ThreadPoolExecutor)Executors#newCachedThreadPool();
+                                 #newFixedThreadPool
+
+
+Callable/Future接口
+Future<T> future = executor.submit(Callable<T>)
+future.get()
+
+
+Selector处理Channel
+
+
